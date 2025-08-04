@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="bg-[#1F1F1F] text-[#F1F1F1] font-sans">
+
+  <main class="flex flex-col lg:flex-row min-h-screen">
+    <aside class="w-full lg:w-1/4 bg-gradient-to-b from-[#2B2B2B] to-[#3A3A3A] p-8 shadow-md">
+      <div class="flex flex-col gap-8">
+        <h1 class="text-4xl font-bold text-center text-yellow-400">📝 Notes App</h1>
+        <div class="flex gap-3 bg-yellow-600 items-center py-3 px-5 text-xl hover:bg-yellow-500 rounded-lg cursor-pointer transition">
+          <i class="ri-booklet-line text-2xl text-white"></i>
+          <span class="font-semibold text-white">My Notes</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="flex-1 px-5 sm:px-10 pt-10 pb-20">
+      <form id="form" class="max-w-3xl mx-auto">
+        <div class="bg-[#2A2A2A] p-6 sm:p-10 flex flex-col gap-6 rounded-xl shadow-xl border border-gray-700">
+          <h2 class="text-3xl font-bold text-gray-100">Add a New Note</h2>
+          <input type="text" id="title" placeholder="Enter note title..." class="w-full border border-gray-600 bg-[#1F1F1F] text-white p-3 rounded-lg text-xl focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+          <textarea id="content" placeholder="Write your note here..." class="w-full border border-gray-600 bg-[#1F1F1F] text-white p-3 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+          <div class="self-end">
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg shadow-md text-lg transition">
+              <i class="ri-add-circle-line mr-2"></i> Add Note
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <section class="mt-16 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="ri-sticky-note-line text-2xl text-yellow-400"></i>
+          <h2 class="text-2xl font-semibold text-gray-100">Your Notes</h2>
+        </div>
+        <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </section>
+    </section>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
